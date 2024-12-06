@@ -1,0 +1,40 @@
+.accordion-body {
+    text-align: left; /* Aligns text to the left */
+    font-size: 0.9rem; /* Adjust font size for better readability */
+    padding: 10px 20px; /* Adds padding inside the accordion body */
+  }
+  
+  .accordion-header button {
+    text-align: left; /* Aligns the accordion button text to the left */
+    font-weight: bold;
+  }
+  
+  ul {
+    padding-left: 20px; /* Adds indentation for list items */
+  }
+  
+  ul li {
+    line-height: 1.5; /* Increases spacing between list items */
+  }
+  
+  .job h4 {
+    margin-top: 10px; /* Adds space above job title */
+    margin-bottom: 5px; /* Adds space below job title */
+    font-weight: bold; /* Makes the job title bold */
+  }
+  
+  .job p {
+    font-style: italic; /* Adds an italic style to job duration */
+    margin-bottom: 10px; /* Adds space below the duration */
+  }
+  
+  .accordion {
+    margin-top: 20px; /* Adds space above the accordion */
+  }
+  
+  .accordion-item {
+    border: 1px solid #ddd; /* Adds a border around each accordion item */
+    border-radius: 5px; /* Rounds the corners */
+    margin-bottom: 10px; /* Adds space between accordion items */
+  }
+  

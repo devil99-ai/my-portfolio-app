@@ -1,0 +1,30 @@
+<div class="modal-header">
+    <h2>{{project.name}}</h2>
+    <button class="btn-close" (click)="bsModlRef.hide()"></button>
+</div>
+
+<div class="modal-body">
+
+    
+    <carousel>
+        <div *ngFor="let picture of project.pictures">
+        <slide><img src={{picture}} type="image/png" alt="slide1" style="display: block; width: 100%;"></slide>
+        <slide><ul class="list-group list-group list-group-flush">
+            <li class="list-group-item list-group-item-primary" *ngFor="let testCase of project.testCases">
+              {{ testCase }}
+            </li>
+          </ul></slide>
+        </div>
+
+    </carousel>
+
+    <h3 class="mt-2">Description</h3>
+    <p>{{project.description}}</p>
+    <p>You can find this project in github <a href="{{project.projectlink}}">here</a> </p>
+    <hr>
+    <div class="d-flex flex-wrap">
+        <div *ngFor="let tag of project.tags">
+            <div class="tag me-2 mb-1" [style.background-color]="tag.color">{{tag}}</div>
+        </div>
+    </div>
+</div>

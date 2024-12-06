@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <!--About me-->
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>About Me</h2>
+                <img src="souvik_photo.ico" type="image/png" alt="profile picture" width="256" height="256" class="rounded-circle">
+                <p>Hi, I'm Souvik, a QA professional with 3 years of experience as a Network and Security Engineer at Infosys, now focused on software testing and automation. Skilled in Appium, Selenium, Cypress, TestNG, JUnit, and Cucumber, I excel at building robust automation frameworks and performing manual and API testing using tools like Postman. I also bring expertise in Python, SQL, Google Cloud, Terraform scripting, and performance testing, ensuring efficient and high-quality deliverables. I'm eager to contribute as a QA Engineer or Software Tester, leveraging my technical knowledge and attention to detail to deliver seamless user experiences.</p>
+            </div>
+
+        </div>
+        <!--Featured project-->
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>Featured Project</h2>
+                <h4>{{featuredProject.name}}</h4>
+            </div>
+
+            <carousel>
+                <div *ngFor="let picture of featuredProject.pictures">
+                <slide><img src={{picture}} type="image/png" alt="slide1" style="display: block; width: 100%;"></slide>
+                </div>
+        
+            </carousel>
+
+            <p class="mt-2">{{featuredProject.summary}}</p>
+            <p>Visit portfolio section to <a href="/portfolio">know more</a> </p>
+        </div>
+    </div>
+</div>

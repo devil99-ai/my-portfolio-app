@@ -1,0 +1,127 @@
+<div class="container text-center">
+    <iframe
+    src="/resume.pdf"
+    width="100%"
+    height="500px"
+    style="border: none;"
+    title="Resume Preview">
+  </iframe>
+    <button (click)="DownloadFile()" class="btn btn-primary mb-5 shadow border">Download Resume here</button>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="false"
+              aria-controls="collapseOne"
+            >
+              Work Experience
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+          <div class="accordion-body">
+            <div *ngFor="let job of workExperience" class="job">
+              <h4>{{ job.title }}</h4>
+              <div *ngFor="let detail of job.details" class="job-detail">
+                <ul>
+                  <li *ngFor="let point of detail.points">{{ point }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Certifications
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Details about your certifications.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Education
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <ul>
+                <li *ngFor="let edu of education">
+                  <strong>{{ edu.degree }}</strong> - {{ edu.institution }} <br />
+                  <em>{{ edu.duration }}</em> <br />
+                  Percentage: {{ edu.percentage }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              Skills
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <ul>
+                <li *ngFor="let skill of skills">{{ skill }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+</div>
