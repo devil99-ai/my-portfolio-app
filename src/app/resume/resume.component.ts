@@ -2,6 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component, Renderer2 } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+
 
 @Component({
   selector: 'app-resume',
@@ -103,11 +106,25 @@ skills = [
   'Docker and Jenkins',
 ];
 
+ 
 
 
-  constructor(private titleService: Title, private renderer: Renderer2){
+
+
+  constructor(private titleService: Title, private renderer: Renderer2, @Inject(PLATFORM_ID) private platformId: Object){
+
+
     this.titleService.setTitle('Souvik Sharma - Portfolio');
   }
+
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      // Code that depends on the DOM
+      const element = document.createElement('div');
+      console.log('DOM is accessible:', element);
+    }
+  }
+  
 
   DownloadFile(){
     const link = this.renderer.createElement('a');

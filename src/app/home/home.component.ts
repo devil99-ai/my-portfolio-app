@@ -4,6 +4,8 @@ import { ProjectsService } from '../_services/projects.service';
 import { Project } from '../_modules/Project';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgFor } from '@angular/common';
+import { Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-home',
